@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>A-Frame 1.8.0 XYZ Demo</title>
+  <!-- ご指定のA-Frame 1.8.0 ライブラリ -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <!-- 自作のJavaScript（A-Frameの後に読み込み、かつdeferは付けない） -->
+  <script src="script.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+  <!-- 自作の「xyz-loader」コンポーネントを a-scene に直接指定 -->
+  <a-scene xyz-loader>
+    
+    <!-- 環境：緑色の地面 -->
+    <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
+    
+    <!-- 環境：空の背景色 -->
+    <a-sky color="#ECECEC"></a-sky>
+
+    <!-- カメラ位置の初期化（少し後ろに下げて見やすく設定） -->
+    <a-entity camera="" position="40 20 40" wasd-controls="" look-controls="" aframe-injected="" rotation="0 0 0"></a-entity>
+        
+    
+  </a-scene>
+
+</body>
+</html>
